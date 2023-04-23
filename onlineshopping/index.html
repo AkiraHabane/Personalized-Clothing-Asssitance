@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Generation App using DALL-2 OpenAI Model</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+<h2>Basic Usage of DALL-2 Image Generation Model of OpenAI</h2>
+<div class="container">
+    <div class="user-action">
+        <input type="text">
+        <input type="text">
+        <input type="text">
+        <button>Generate Personalized Clothing</button>
+    </div>
+    <div class="img-container"></div>
+</div>
+<script>
+    const input = document.querySelectorAll('input');
+const button = document.querySelector('button');
+const imgContainer = document.querySelector('.img-container');
+button.onclick = () => {
+    if (input[0]) {
+        // Now make a request using POST method
+        const http = new XMLHttpRequest();
+        const data = new FormData();
+        data.append('prompt', input[0].value + input[1].value + input[2].value);
+        http.open('POST', 'request.php', true);
+        http.send(data);
+        http.onload = () => {
+            imgContainer.innerHTML = '';
+            const response = JSON.parse(http.response).data;
+            if (Array.isArray(response)) {
+                response.forEach(e => {
+                    if (e.b64_json) {
+                        const img = document.createElement('img');
+                        img.src = 'data:image/jpeg;base64,' + e.b64_json;
+                        imgContainer.appendChild(img);
+                    } else {
+                        console.error('Error: Response object does not have b64_json property');
+                    }
+                });
+            } else if (response.b64_json) {
+                const img = document.createElement('img');
+                img.src = 'data:image/jpeg;base64,' + response.b64_json;
+                imgContainer.appendChild(img);
+            } else {
+                console.error('Error: Invalid response object');
+            }
+        }
+    }
+};
+
+</script>
+</body>
+</html>
