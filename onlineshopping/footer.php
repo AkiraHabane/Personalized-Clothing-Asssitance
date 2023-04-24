@@ -10,9 +10,9 @@
 								<h3 class="footer-title">About Us</h3>
 								
 								<ul class="footer-links">
-									<li><a href="#"><i class="fa fa-map-marker"></i>address</a></li>
-									<li><a href="#"><i class="fa fa-phone"></i>9846372444</a></li>
-									<li><a href="#"><i class="fa fa-envelope-o"></i>abc@gmail.com</a></li>
+									<li><a href="#"><i class="fa fa-map-marker"></i>Cyber Knights</a></li>
+									<li><a href="#"><i class="fa fa-phone"></i>09123456789</a></li>
+									<li><a href="#"><i class="fa fa-envelope-o"></i>cyberknights@gmail.com</a></li>
 								</ul>
 							</div>
 						</div>
@@ -36,11 +36,11 @@
 							<div class="footer">
 								<h3 class="footer-title">Categories</h3>
 								<ul class="footer-links">
-									<li><a href="#">Mobiles</a></li>
+									<!-- <li><a href="#">Mobiles</a></li> -->
 									<li><a href="#">Men</a></li>
 									<li><a href="#">Women</a></li>
 									<li><a href="#">Kids</a></li>
-									<li><a href="#">Accessories</a></li>
+									<!-- <li><a href="#">Accessories</a></li> -->
 								</ul>
 							</div>
 						</div>
