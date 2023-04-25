@@ -4,7 +4,7 @@ require __DIR__ .'/vendor/autoload.php';
 
 use Orhanerday\OpenAi\OpenAi;
 
-$open_ai = new OpenAi('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');
+$open_ai = new OpenAi('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');
 
 //get prompt param that we will send to JS file
 //test using GET request 

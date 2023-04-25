@@ -4,7 +4,7 @@ require __DIR__.'/vendor/autoload.php';
 
 use Orhanerday\OpenAi\OpenAi;
 
-$open_ai_key = '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';
+$open_ai_key = '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';
 
 $open_ai = new OpenAi($open_ai_key);
 
